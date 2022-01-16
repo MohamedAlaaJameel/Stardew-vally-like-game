@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Potion Red
   stackable: 1
-  orignalPrefab: {fileID: 7717509788342852067, guid: 022f779db4dfcae4da99c9d8d27ae175, type: 3}
+  orignalPrefab: {fileID: 7717509788342852067}
 --- !u!58 &-8800674391885195629
 CircleCollider2D:
   m_ObjectHideFlags: 0

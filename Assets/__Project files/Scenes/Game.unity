@@ -38175,7 +38175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &787176674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38193,7 +38193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 455, y: 322.6285}
+  m_AnchoredPosition: {x: 628, y: 761}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787176675
@@ -40125,6 +40125,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8816371543411593773, guid: 54b6e06ddbddc754a990013f94f16c35, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8816371543411593774, guid: 54b6e06ddbddc754a990013f94f16c35, type: 3}
       propertyPath: m_Name
       value: 'GamePlay UI '
@@ -40217,6 +40221,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8816371543859982505, guid: 54b6e06ddbddc754a990013f94f16c35, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816371543859982505, guid: 54b6e06ddbddc754a990013f94f16c35, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8816371543912344360, guid: 54b6e06ddbddc754a990013f94f16c35, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

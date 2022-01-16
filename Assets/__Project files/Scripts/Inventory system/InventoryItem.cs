@@ -19,6 +19,7 @@ public class InventoryItem
     public GameObject orignalPrefab;
     public int NumofStackeditems=1;
     public static int UniqueServerID=1;
+
     public string itemName = string.Empty;      //    What the item will be called in the inventory
     public Sprite itemIcon = null;         //    What the item will look like in the inventory
     //public Rigidbody2D itemObject = null;       //    Optional slot for a PreFab to instantiate when discarding

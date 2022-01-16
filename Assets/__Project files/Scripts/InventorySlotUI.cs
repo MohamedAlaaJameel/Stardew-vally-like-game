@@ -12,7 +12,7 @@ public class InventorySlotUI : MonoBehaviour
     [SerializeField] Image icon;
     [SerializeField] TMPro.TextMeshProUGUI count;
     [SerializeField] InventorySlotUI itemPlaceHolder;
-    public InventoryItem item;
+    InventoryItem item;
  
     public InventoryItem Item
     {
@@ -31,6 +31,7 @@ public class InventorySlotUI : MonoBehaviour
             }
             else
             {
+
                 item = value;
                 icon.sprite = null;
                 count.text = string.Empty;
@@ -54,10 +55,8 @@ public class InventorySlotUI : MonoBehaviour
             btn.onClick.AddListener(OnSlotClick);
         }
     }
-    private void Start()
-    {
-        itemPlaceHolder.gameObject.SetActive(false);
-    }
+ 
+
     public void CleanSlot()
     {
         Item = null;
@@ -75,7 +74,7 @@ public class InventorySlotUI : MonoBehaviour
         {
             if (itemPlaceHolder.Item == null)
             {
-                OnItemDrag(Item, null,true); 
+                OnItemDrag(Item, null, true);
             }
             else
             {
@@ -90,6 +89,9 @@ public class InventorySlotUI : MonoBehaviour
             }
         }
 
+     //   itemPlaceHolder.gameObject.SetActive(true);
+  
+
     }
 
     private void Update()
@@ -100,10 +102,13 @@ public class InventorySlotUI : MonoBehaviour
             {
                 if (Item!=null&& Item.orignalPrefab != null)
                 {
-                    GameObject Treefragments = Instantiate(Item.orignalPrefab);
-                    Treefragments.transform.position = transform.position;
+                    Debug.Log($"Instantiating {Item.orignalPrefab}");
+                    Vector2 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                     GameObject Treefragments = Instantiate(Item.orignalPrefab);
+                    Treefragments.transform.position = worldPosition;
                 }
             }
+
         }
 
     }

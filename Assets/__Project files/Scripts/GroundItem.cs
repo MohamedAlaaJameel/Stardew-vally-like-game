@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GroundItem : MonoBehaviour, IPickable
 {
-    [SerializeField] protected string itemName= "Undefined Item";
+    [SerializeField] protected string itemName= "";
     [SerializeField] protected bool stackable;
     [SerializeField] protected GameObject orignalPrefab;
    protected InventoryItem item;
