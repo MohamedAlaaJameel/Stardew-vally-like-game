@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+ 
 public class UiInventory : MonoBehaviour
 {
     [SerializeField] InventoryItemList InventorySO;
@@ -14,15 +14,15 @@ public class UiInventory : MonoBehaviour
         UpdateInventoryUI();
         instance = this;
     }
-
-
     public void UpdateInventoryUI()
     {
-        for (int i = 0; i < slotsUI.Count&& i < InventorySO.itemList.Count; i++)
+        slotsUI.ForEach(t =>t.CleanSlot());
+        for (int i = 0; i < slotsUI.Count && i < InventorySO.itemList.Count; i++)
         {
-            var icon = InventorySO.itemList[i].itemIcon;
+            slotsUI[i].Item = InventorySO.itemList[i];
+  
 
-            slotsUI[i].Icon = icon;
         }
+        
     }
 }

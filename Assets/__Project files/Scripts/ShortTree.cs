@@ -4,8 +4,12 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using DG.Tweening;
-public class ShortTree : MonoBehaviour,IHittable
+public class ShortTree : MonoBehaviour,IHittable, IspreadOnDestroy
 {
+    [SerializeField] float spreadDistance;
+    [SerializeField] int numOfDrops=5;
+    [SerializeField] GameObject OnDestroyPickUpPrefab;
+    public Vector3 SpreadInArea => new Vector2(spreadDistance * UnityEngine.Random.value - spreadDistance / 2, spreadDistance * UnityEngine.Random.value - spreadDistance / 2);
     Vector3 treeScale;
     private void Start()
     {
@@ -33,9 +37,19 @@ public class ShortTree : MonoBehaviour,IHittable
     }
     public void Hit()
     {
-        transform.DOScale(treeScale * 1.5f, .15f).SetEase(Ease.OutBounce).OnComplete(delegate(){
-            transform.DOScale(treeScale, .15f).SetEase(Ease.OutBounce);
-            });
+        transform.DOScale(treeScale * 1.5f, .15f).SetEase(Ease.OutBounce).OnComplete
+        (delegate(){transform.DOScale(treeScale, .15f).SetEase(Ease.OutBounce);});
+        Spread();
        // Destroy(this.gameObject);
+    }
+    public void Spread()
+    {
+        for (int i = 0; i < numOfDrops; i++)
+        {
+            GameObject Treefragments = Instantiate(OnDestroyPickUpPrefab);
+            Treefragments.transform.position = transform.position;
+            Treefragments.transform.position += SpreadInArea;
+
+        }
     }
 }

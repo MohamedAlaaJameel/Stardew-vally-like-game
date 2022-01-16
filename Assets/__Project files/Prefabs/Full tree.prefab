@@ -123,6 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5992b26204b835648b4070d1d46aa731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spreadDistance: 0.8
+  numOfDrops: 5
+  OnDestroyPickUpPrefab: {fileID: 1599870805660838364, guid: 599538f34958f4b459600492c53909b4, type: 3}
 --- !u!114 &6462032543475448711
 MonoBehaviour:
   m_ObjectHideFlags: 0

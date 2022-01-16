@@ -1,16 +1,32 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class InventoryItemList : ScriptableObject
 {
     public List<InventoryItem> itemList;
-    public int maxSize = 20;
-    public bool addItem(InventoryItem item)
+    public  const int maxSize = 20;
+    public bool AddItem(InventoryItem item)
     {
-        if (itemList.Count<maxSize)
+        if (itemList.Count < maxSize)
         {
-            itemList.Add(item);
+            if (item.isStackable)
+            {
+                var similarItems = itemList.Where(i => i.itemName != string.Empty && i.itemName == item.itemName);
+                if (similarItems.IsAny())
+                {
+                    similarItems.First().NumofStackeditems += item.NumofStackeditems;
+                }
+                else
+                {
+                    itemList.Add(item);
+                }
+            }
+            else
+            {
+                itemList.Add(item);
+            }
             return true;
         }
         else

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IPickable : IHighlightable
 {
-    public void OnPick();
+    public void OnPick(Transform picker=null);
     public InventoryItem Item { get; }
   
 

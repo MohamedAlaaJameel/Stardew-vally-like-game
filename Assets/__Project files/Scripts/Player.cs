@@ -86,10 +86,10 @@ public class Player
         if (hittable != null)
         {
             var itemObject = hittable.GetComponent<IPickable>().Item;
-            if (inventory.addItem(itemObject))
+            if (inventory.AddItem(itemObject))
             {
                 UiInventory.instance.UpdateInventoryUI();//spakety to be remvoed
-                hittable.GetComponent<IPickable>().OnPick();//destroy on pick..
+                hittable.GetComponent<IPickable>().OnPick(transform);//destroy on pick..
             }
         }
     }

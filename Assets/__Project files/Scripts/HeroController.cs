@@ -48,11 +48,15 @@ public class HeroController : MonoBehaviour
 
     private void CheckForUserInterActions()
     {
-        if ((controller as IControllerShortCuts).InteractBtn)
+        if ((controller as IControllerShortCuts).CollectBtn)
         {
-            Hero.UseTool(toolMaxDist, toolDiameter);
             Hero.PickItem(pickMaxDist, pickDiameter);
-            Hero.Interact(interactMaxDist, InteractDiameter);
+        }
+        if ((controller as IControllerShortCuts).AttackBtn)
+        {
+            Hero.Interact(interactMaxDist, InteractDiameter);//open chest..
+            Hero.UseTool(toolMaxDist, toolDiameter);//cut trees.. todo attack enemy
+
         }
     }
 

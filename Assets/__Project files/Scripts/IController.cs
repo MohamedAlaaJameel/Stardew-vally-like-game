@@ -9,7 +9,8 @@ public interface IController
 
 public interface IControllerShortCuts
 {
-    public bool InteractBtn { get; }
+    public bool CollectBtn { get; }
+    public bool AttackBtn { get; }
     public bool OpenInventoryBtn { get; }
 }
 

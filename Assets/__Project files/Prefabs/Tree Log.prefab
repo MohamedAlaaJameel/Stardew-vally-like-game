@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1599870805660838366}
   - component: {fileID: 1599870805660838367}
   - component: {fileID: 3062327416350692682}
+  - component: {fileID: 6782683972479502354}
   m_Layer: 0
   m_Name: Tree Log
   m_TagString: Untagged
@@ -123,7 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8caf56bef8b6a9647aa70255b9bd34bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamationPrefab: {fileID: 5892241806852121438, guid: 38a41dd71dc5c9d4e95023104bba6d92, type: 3}
+  itemName: Tree Log
+  stackable: 1
+  orignalPrefab: {fileID: 1599870805660838364}
 --- !u!114 &3062327416350692682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +168,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!50 &6782683972479502354
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599870805660838364}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 8
+  m_AngularDrag: 2
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 2
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

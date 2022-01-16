@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: InventoryItemList
   m_EditorClassIdentifier: 
   itemList:
-  - itemName: Wood Log
+  - NumofStackeditems: 4
+    itemName: Tree Log
     itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
     isUnique: 0
     isIndestructible: 0
@@ -21,156 +22,21 @@ MonoBehaviour:
     isStackable: 1
     destroyOnUse: 0
     encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
+  - NumofStackeditems: 5
+    itemName: Potion Pink
+    itemIcon: {fileID: -2466894388072068877, guid: 8d032906bde72954983104c723dd055b, type: 3}
     isUnique: 0
     isIndestructible: 0
     isQuestItem: 0
     isStackable: 1
     destroyOnUse: 0
     encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
+  - NumofStackeditems: 19
+    itemName: Potion Red
+    itemIcon: {fileID: 6175205557558991145, guid: 8d032906bde72954983104c723dd055b, type: 3}
     isUnique: 0
     isIndestructible: 0
     isQuestItem: 0
     isStackable: 1
     destroyOnUse: 0
     encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  - itemName: Wood Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
-    isUnique: 0
-    isIndestructible: 0
-    isQuestItem: 0
-    isStackable: 1
-    destroyOnUse: 0
-    encumbranceValue: 0
-  maxSize: 20
