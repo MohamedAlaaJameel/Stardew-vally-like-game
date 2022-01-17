@@ -8,12 +8,15 @@ using UnityEngine.UI;
 
 public class InventorySlotUI : MonoBehaviour
 {
+    public delegate void OneParamInvItem(InventorySlotUI item);
+    public static event OneParamInvItem OnInventoryItemClick;
 
-    [SerializeField] Image icon;
-    [SerializeField] TMPro.TextMeshProUGUI count;
-    [SerializeField] InventorySlotUI itemPlaceHolder;
-    InventoryItem item;
- 
+
+    [SerializeField]public Image icon;
+    [SerializeField]public TMPro.TextMeshProUGUI count;
+
+    public InventoryItem item;
+
     public InventoryItem Item
     {
         get { return item; }
@@ -26,7 +29,7 @@ public class InventorySlotUI : MonoBehaviour
                 item = value;
                 icon.sprite = item.itemIcon;
                 count.text = item.NumofStackeditems.ToString();
-              //  Debug.Log($"Count {count.text}of {item.itemIcon.name}");
+                //  Debug.Log($"Count {count.text}of {item.itemIcon.name}");
 
             }
             else
@@ -43,7 +46,7 @@ public class InventorySlotUI : MonoBehaviour
 
 
 
- 
+
     private void Awake()
     {
 
@@ -55,7 +58,7 @@ public class InventorySlotUI : MonoBehaviour
             btn.onClick.AddListener(OnSlotClick);
         }
     }
- 
+
 
     public void CleanSlot()
     {
@@ -63,53 +66,42 @@ public class InventorySlotUI : MonoBehaviour
     }
     private void OnItemDrag(InventoryItem itemPlaceholderItem, InventoryItem slotItem, bool acriveFlag)
     {
-        itemPlaceHolder.Item = itemPlaceholderItem;
-        Item = slotItem;
-        itemPlaceHolder.gameObject.SetActive(acriveFlag);
+     
+
 
     }
     public void OnSlotClick()
     {
-        if (Item != null)
-        {
-            if (itemPlaceHolder.Item == null)
-            {
-                OnItemDrag(Item, null, true);
-            }
-            else
-            {
-                OnItemDrag(Item, itemPlaceHolder.Item, true);
-            }
-        }
-        else
-        {
-            if (itemPlaceHolder.Item != null)
-            {
-                OnItemDrag(null, itemPlaceHolder.Item, false);
-            }
-        }
-
-     //   itemPlaceHolder.gameObject.SetActive(true);
-  
-
+        OnInventoryItemClick.Invoke(this);
     }
 
-    private void Update()
-    {
-        if (itemPlaceHolder.Item!=null)
-        {
-            if (Input.GetMouseButton(0) && EventSystem.current.IsPointerOverGameObject() == false)
-            {
-                if (Item!=null&& Item.orignalPrefab != null)
-                {
-                    Debug.Log($"Instantiating {Item.orignalPrefab}");
-                    Vector2 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                     GameObject Treefragments = Instantiate(Item.orignalPrefab);
-                    Treefragments.transform.position = worldPosition;
-                }
-            }
+    //private void Update()
+    //{
+    //    if (!isButtonSet)
+    //    {
+    //        return;
+    //    }
+    //    if (itemPlaceHolder.Item != null)
+    //    {
+    //        if (Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject() == false)
+    //        {
+    //            if (itemPlaceHolder.Item.orignalPrefab != null)
+    //            {
+                 
+    //                Vector2 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    //                //GameObject Treefragments = Instantiate(itemPlaceHolder.Item.orignalPrefab);
+    //                Debug.Log($"{itemPlaceHolder.Item.itemName}");
+    //                GameObject Treefragments=Instantiate(Resources.Load($"{itemPlaceHolder.Item.itemName}")) as GameObject;
+ 
 
-        }
+    //                Treefragments.transform.position = worldPosition;
+    //                isButtonSet = false;
+    //                itemPlaceHolder.gameObject.SetActive(false);
 
-    }
+    //            }
+    //        }
+
+    //    }
+
+    //}
 }

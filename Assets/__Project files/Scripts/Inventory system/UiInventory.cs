@@ -14,11 +14,14 @@ public class UiInventory : MonoBehaviour
         UpdateInventoryUI();
         instance = this;
     }
+    static int uniqueID=33330;
     public void UpdateInventoryUI()
     {
         slotsUI.ForEach(t =>t.CleanSlot());
         for (int i = 0; i < slotsUI.Count && i < InventorySO.itemList.Count; i++)
         {
+            uniqueID++;
+            InventorySO.itemList[i].UniqueServerID = uniqueID;
             slotsUI[i].Item = InventorySO.itemList[i];
   
 

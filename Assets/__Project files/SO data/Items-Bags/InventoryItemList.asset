@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemList:
   - orignalPrefab: {fileID: 0}
-    NumofStackeditems: 2
-    itemName: Potion Red
-    itemIcon: {fileID: 6175205557558991145, guid: 8d032906bde72954983104c723dd055b, type: 3}
+    NumofStackeditems: 6
+    itemName: Tree Log
+    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
     isUnique: 0
     isIndestructible: 0
     isQuestItem: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
     destroyOnUse: 0
     encumbranceValue: 0
   - orignalPrefab: {fileID: 0}
-    NumofStackeditems: 4
+    NumofStackeditems: 18
     itemName: Potion Pink
     itemIcon: {fileID: -2466894388072068877, guid: 8d032906bde72954983104c723dd055b, type: 3}
     isUnique: 0
@@ -34,9 +34,9 @@ MonoBehaviour:
     destroyOnUse: 0
     encumbranceValue: 0
   - orignalPrefab: {fileID: 0}
-    NumofStackeditems: 1
-    itemName: Tree Log
-    itemIcon: {fileID: -3085000837880981780, guid: 789f607500d5e124ea6e157fa875f5e3, type: 3}
+    NumofStackeditems: 8
+    itemName: Potion Red
+    itemIcon: {fileID: 6175205557558991145, guid: 8d032906bde72954983104c723dd055b, type: 3}
     isUnique: 0
     isIndestructible: 0
     isQuestItem: 0

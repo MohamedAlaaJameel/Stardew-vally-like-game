@@ -8,7 +8,20 @@ public class InventoryItem
     {
         UniqueServerID += 1;
     }
-    public InventoryItem(string itemName, Sprite itemIcon, GameObject orignalPrefab, bool isStackable = false,int NumofStackeditems=1)
+
+    public InventoryItem(InventoryItem item)
+    {
+        if (item!=null)
+        {
+            this.isStackable = item.isStackable;
+            this.itemIcon = item.itemIcon;
+            this.itemName = item.itemName;
+            this.NumofStackeditems = item.NumofStackeditems;
+            this.orignalPrefab = item.orignalPrefab;
+        }
+        
+    }
+    public InventoryItem(string itemName, Sprite itemIcon, GameObject orignalPrefab, bool isStackable = false, int NumofStackeditems = 1)
     {
         this.isStackable = isStackable;
         this.itemIcon = itemIcon;
@@ -17,8 +30,8 @@ public class InventoryItem
         this.orignalPrefab = orignalPrefab;
     }
     public GameObject orignalPrefab;
-    public int NumofStackeditems=1;
-    public static int UniqueServerID=1;
+    public int NumofStackeditems = 1;
+    public  int UniqueServerID = 1;
 
     public string itemName = string.Empty;      //    What the item will be called in the inventory
     public Sprite itemIcon = null;         //    What the item will look like in the inventory

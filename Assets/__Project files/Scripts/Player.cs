@@ -78,6 +78,7 @@ public class Player
         if (hittable != null)
         {
             hittable.GetComponent<IHittable>().Hit();
+
         }
     }
     public void PickItem(float pickDistance, float DetectionCirculeRadius)

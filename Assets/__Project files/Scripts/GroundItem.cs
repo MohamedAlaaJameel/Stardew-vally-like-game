@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GroundItem : MonoBehaviour, IPickable
 {
+ 
     [SerializeField] protected string itemName= "";
     [SerializeField] protected bool stackable;
     [SerializeField] protected GameObject orignalPrefab;
@@ -12,9 +13,10 @@ public class GroundItem : MonoBehaviour, IPickable
 
     private void Awake()
     {
+        //      Debug.Log($"Ground item awake has been called {orignalPrefab}");
         item = new InventoryItem(itemName, GetComponent<SpriteRenderer>().sprite, orignalPrefab, stackable);
     }
-
+    //
 
     protected bool _IsHighlighted;
     public virtual bool IsHighlighted => _IsHighlighted;

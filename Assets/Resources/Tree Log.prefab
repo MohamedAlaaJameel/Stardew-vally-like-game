@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1599870805660838367}
   - component: {fileID: 3062327416350692682}
   - component: {fileID: 6782683972479502354}
+  - component: {fileID: 3323697597958799623}
   m_Layer: 0
   m_Name: Tree Log
   m_TagString: Untagged
@@ -124,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8caf56bef8b6a9647aa70255b9bd34bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TestSO: {fileID: 11400000, guid: 6272852563cf23345a891b390025648f, type: 2}
   itemName: Tree Log
   stackable: 1
   orignalPrefab: {fileID: 1599870805660838364}
@@ -189,3 +191,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3323697597958799623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599870805660838364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2935222d534a14d4e8107b6cba7c2035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TestSO: {fileID: 11400000, guid: 6272852563cf23345a891b390025648f, type: 2}
+  itemName: 
+  stackable: 0
+  orignalPrefab: {fileID: 1599870805660838364}

@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2935222d534a14d4e8107b6cba7c2035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TestSO: {fileID: 11400000, guid: 6272852563cf23345a891b390025648f, type: 2}
   itemName: Potion Pink
   stackable: 1
   orignalPrefab: {fileID: 7717509788342852067}

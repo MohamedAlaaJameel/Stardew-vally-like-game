@@ -4,6 +4,8 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using DG.Tweening;
+using UnityEditor;
+
 public class ShortTree : MonoBehaviour,IHittable, IspreadOnDestroy
 {
     [SerializeField] float spreadDistance;
@@ -46,7 +48,8 @@ public class ShortTree : MonoBehaviour,IHittable, IspreadOnDestroy
     {
         for (int i = 0; i < numOfDrops; i++)
         {
-            GameObject Treefragments = Instantiate(OnDestroyPickUpPrefab);
+           // GameObject Treefragments = Instantiate(OnDestroyPickUpPrefab);
+            GameObject Treefragments = PrefabUtility.InstantiatePrefab(OnDestroyPickUpPrefab.gameObject as GameObject) as GameObject;
             Treefragments.transform.position = transform.position;
             Treefragments.transform.position += SpreadInArea;
 

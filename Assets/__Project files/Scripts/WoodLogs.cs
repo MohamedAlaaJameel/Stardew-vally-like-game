@@ -7,9 +7,11 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class WoodLogs :GroundItem
 {
+  
     private void Awake()
-    {
-        item = new InventoryItem(itemName, GetComponent<SpriteRenderer>().sprite,orignalPrefab,true);
+    {   
+        item = new InventoryItem(itemName, GetComponent<SpriteRenderer>().sprite, orignalPrefab, true);
+       
     }
 
     public override void HighlightOn()

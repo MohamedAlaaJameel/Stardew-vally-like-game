@@ -5,6 +5,16 @@ using System.Linq;
 
 public class InventoryItemList : ScriptableObject
 {
+
+    private void OnEnable()
+    {
+        PlaceHolder.removeFromDataInventory += RemoveItem;
+    }
+    private void OnDisable()
+    {
+        PlaceHolder.removeFromDataInventory -= RemoveItem;
+
+    }
     public List<InventoryItem> itemList;
     public  const int maxSize = 20;
     public bool AddItem(InventoryItem item)
@@ -35,4 +45,14 @@ public class InventoryItemList : ScriptableObject
             return false;
         }
     }
+
+    public void RemoveItem(InventoryItem item)
+    {
+        IEnumerable<InventoryItem> wantedItem = itemList.Where(it => it.UniqueServerID == item.UniqueServerID);
+
+        Debug.Log($"{wantedItem.Count()}");
+        itemList.Remove(wantedItem.First());
+    }
+
+
 }
